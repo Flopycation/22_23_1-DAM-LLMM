@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+// Pedimos al usuario que ingrese dos números
+let num1 = prompt("Ingrese el primer número: ");
+
+let num2 = prompt("Ingrese el segundo número: ");
+
+// Convertimos los números a enteros
+
+num1 = parseInt(num1);
+
+num2 = parseInt(num2);
+
+// Creamos una lista para almacenar los divisores comunes
+let divisoresComunes = [];
+
+// Comprobamos los números del 1 al menor de los dos números ingresados
+for (let i = 1; i <= Math.min(num1, num2); i++) {
+    
+  // Si el número es un divisor de ambos números, lo agregamos a la lista de divisores comunes
+  if (num1 % i === 0 && num2 % i === 0) {
+    divisoresComunes.push(i);
+  }
+}
+
+// Escribimos en pantalla los divisores comunes
+document.write("Los divisores comunes de " + num1 + " y " + num2 + " son: " + divisoresComunes.join(", "));
+
+
+    </script>
+    
+</body>
+
+</html>
