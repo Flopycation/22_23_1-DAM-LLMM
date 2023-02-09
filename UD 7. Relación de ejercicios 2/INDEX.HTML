@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero;
+        var suma = 0;
+
+            do {
+             numero = prompt("Introduce un número (o pulsa cancelar para salir): ");
+
+            if (isNaN(numero) && numero !== null) {
+                alert("El valor introducido no es un número");
+            } else if (numero !== null) {
+            suma += parseFloat(numero);
+            }
+            } while (numero !== null);
+
+            alert("La suma total de los números introducidos es: " + suma);
+
+    </script>
+</body>
+</html>
