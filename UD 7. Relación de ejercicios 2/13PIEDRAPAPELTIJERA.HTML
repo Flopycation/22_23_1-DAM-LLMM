@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// Creación de un array con las opciones de juego
+var opciones = ["piedra", "papel", "tijera"];
+
+// Función para elegir una opción aleatoria
+function elegirOpcion() {
+  var elegir = opciones[Math.floor(Math.random() * opciones.length)];
+  return elegir;
+}
+
+// Selección de la opción del jugador
+var jugador = prompt("Elige una opción: piedra, papel o tijera");
+
+// Validación de la opción elegida por el jugador
+if (opciones.indexOf(jugador) === -1) {
+  alert("Opción inválida. Por favor elige piedra, papel o tijera.");
+} else {
+  // Selección de la opción de la máquina
+  var maquina = elegirOpcion();
+
+  // Mostrar resultados
+  alert("Tu eligiste " + jugador + " y la máquina eligió " + maquina + ".");
+
+  // Comparación de las opciones elegidas
+  if (jugador === maquina) {
+    alert("Empate!");
+  } else if (
+    (jugador === "piedra" && maquina === "tijera") ||
+    (jugador === "papel" && maquina === "piedra") ||
+    (jugador === "tijera" && maquina === "papel")
+  ) {
+    alert("Ganaste!");
+  } else {
+    alert("Perdiste.");
+  }
+}
+
+    </script>
+</body>
+</html>
