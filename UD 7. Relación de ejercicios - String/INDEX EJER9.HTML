@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <script>
+// Pedir al usuario que ingrese una frase
+const frase = prompt("Ingresa una frase:");
+
+// Crear un objeto para almacenar el contador de cada vocal
+const contadorVocales = {
+  'a': 0,
+  'e': 0,
+  'i': 0,
+  'o': 0,
+  'u': 0
+};
+
+// Iterar sobre cada letra de la frase
+for (let i = 0; i < frase.length; i++) {
+  // Si la letra actual es una vocal, incrementar el contador correspondiente
+  const letra = frase.charAt(i).toLowerCase();
+  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+    contadorVocales[letra]++;
+  }
+}
+
+// Mostrar el número de cada vocal encontrada al usuario
+alert(`La frase tiene ${contadorVocales['a']} letras 'a', ${contadorVocales['e']} letras 'e', ${contadorVocales['i']} letras 'i', ${contadorVocales['o']} letras 'o' y ${contadorVocales['u']} letras 'u'.`);
+
+
+        </script>
+        
+</body>
+
+</html>

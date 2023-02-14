@@ -10,17 +10,15 @@
 <body>
 
         <script>
+// Pedir al usuario que ingrese una frase
+const frase = prompt("Ingresa una frase:");
 
-            function ucFirst(str) {
+// Contar cuántas letras 'a' hay en la frase usando la función `match` de JavaScript
+const contador = (frase.match(/a/g) || []).length;
 
-  // Comprobar si la cadena está vacía
-  if (!str) {
-    return str;
-  }
-  
-  // Convertir el primer carácter a mayúscula y concatenarlo con el resto de la cadena
-  return str[0].toUpperCase() + str.slice(1);
-}
+// Mostrar el resultado al usuario
+alert(`La letra 'a' aparece ${contador} veces en la frase.`);
+
 
         </script>
         

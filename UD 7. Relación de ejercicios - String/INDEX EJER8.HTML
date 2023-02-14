@@ -10,6 +10,25 @@
 <body>
 
         <script>
+// Pedir al usuario que ingrese una frase
+const frase = prompt("Ingresa una frase:");
+
+// Crear un array con las vocales
+const vocales = ['a', 'e', 'i', 'o', 'u'];
+
+// Inicializar el contador de vocales
+let contadorVocales = 0;
+
+// Iterar sobre cada letra de la frase
+for (let i = 0; i < frase.length; i++) {
+  // Si la letra actual es una vocal, incrementar el contador de vocales
+  if (vocales.includes(frase.charAt(i).toLowerCase())) {
+    contadorVocales++;
+  }
+}
+
+// Mostrar el número de vocales encontradas al usuario
+alert(`La frase tiene ${contadorVocales} letras vocales.`);
 
 
         </script>
