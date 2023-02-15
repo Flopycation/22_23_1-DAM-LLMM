@@ -10,8 +10,26 @@
 <body>
 
         <script>
+// Pedir al usuario que ingrese una cadena de texto
+const cadena = prompt("Ingresa una cadena de texto:");
 
+// Encontrar el índice del primer paréntesis
+const indiceInicio = cadena.indexOf("(");
 
+// Si no hay ningún paréntesis, mostrar una cadena vacía
+if (indiceInicio === -1) {
+  console.log("");
+} else {
+  // Encontrar el índice del último paréntesis
+  const indiceFin = cadena.lastIndexOf(")");
+  // Si no hay un paréntesis de cierre, mostrar el resto de la cadena a partir del primer paréntesis
+  if (indiceFin === -1) {
+    console.log(cadena.slice(indiceInicio + 1));
+  } else {
+    // Extraer la cadena que se encuentra entre los paréntesis
+    console.log(cadena.slice(indiceInicio + 1, indiceFin));
+  }
+}
         </script>
         
 </body>

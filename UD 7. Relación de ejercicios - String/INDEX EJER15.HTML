@@ -10,8 +10,23 @@
 <body>
 
         <script>
+let texto = prompt("Introduce un texto:");
 
+let vocales = ["a", "e", "i", "o", "u"];
+let primeraVocal = -1;
 
+for (let i = 0; i < texto.length; i++) {
+  if (vocales.includes(texto[i].toLowerCase())) {
+    primeraVocal = i;
+    break;
+  }
+}
+
+if (primeraVocal >= 0) {
+  alert(`La primera vocal se encuentra en la posición ${primeraVocal}`);
+} else {
+  alert("No se ha encontrado ninguna vocal en el texto introducido.");
+}
         </script>
         
 </body>

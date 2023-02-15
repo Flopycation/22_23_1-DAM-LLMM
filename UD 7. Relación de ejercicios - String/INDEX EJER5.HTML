@@ -10,7 +10,23 @@
 <body>
 
         <script>
+let textoConcatenado = '';
 
+while (true) {
+  const texto = prompt('Introduce un texto o pulsa Cancelar para salir.');
+
+  if (texto === null) {
+    break;
+  }
+
+  textoConcatenado += `${texto}-`;
+}
+
+if (textoConcatenado.length === 0) {
+  alert('No se introdujeron textos.');
+} else {
+  alert(`El texto concatenado es: ${textoConcatenado.slice(0, -1)}`);
+}
 
         </script>
         

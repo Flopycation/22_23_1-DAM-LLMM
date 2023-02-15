@@ -10,17 +10,26 @@
 <body>
 
         <script>
+// Pedir al usuario que ingrese una frase
+const frase = prompt("Ingresa una frase:");
 
-            function ucFirst(str) {
+// Crear un array con las vocales
+const vocales = ['a', 'e', 'i', 'o', 'u'];
 
-  // Comprobar si la cadena está vacía
-  if (!str) {
-    return str;
+// Crear una variable para almacenar las vocales encontradas
+let vocalesEncontradas = '';
+
+// Iterar sobre cada letra de la frase
+for (let i = 0; i < frase.length; i++) {
+  // Si la letra actual es una vocal, agregarla a la lista de vocales encontradas
+  if (vocales.includes(frase.charAt(i).toLowerCase())) {
+    vocalesEncontradas += frase.charAt(i) + ' ';
   }
-  
-  // Convertir el primer carácter a mayúscula y concatenarlo con el resto de la cadena
-  return str[0].toUpperCase() + str.slice(1);
 }
+
+// Mostrar las vocales encontradas al usuario
+alert(`Las vocales encontradas en la frase son: ${vocalesEncontradas}`);
+
 
         </script>
         

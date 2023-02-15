@@ -9,20 +9,31 @@
 
 <body>
 
-        <script>
+  <script>
 
-            function ucFirst(str) {
-
-  // Comprobar si la cadena está vacía
-  if (!str) {
-    return str;
-  }
-  
-  // Convertir el primer carácter a mayúscula y concatenarlo con el resto de la cadena
-  return str[0].toUpperCase() + str.slice(1);
-}
-
-        </script>
+    // Definición de la función "truncate"
+    function truncate(str, maxLength) {
+      // Verifica que el argumento "str" sea una cadena de texto
+      if (typeof str !== "string") {
+        throw new TypeError("La cadena debe ser una cadena de texto.");
+      }
+      
+      // Verifica que el argumento "maxLength" sea un número mayor o igual a 3
+      if (typeof maxLength !== "number" || maxLength < 3) {
+        throw new TypeError("La longitud máxima debe ser un número mayor o igual a 3.");
+      }
+    
+      // Si la longitud de la cadena de texto es menor o igual a la longitud máxima, devuelve la cadena sin cambios
+      if (str.length <= maxLength) {
+        return str;
+      }
+    
+      // Si la longitud de la cadena de texto es mayor que la longitud máxima, se utiliza el método "slice" para tomar una porción de la cadena de texto que es la longitud máxima menos tres caracteres, y se agrega "..." al final de esa porción
+      return str.slice(0, maxLength - 3) + "...";
+    }
+    
+    </script>
+    
         
 </body>
 

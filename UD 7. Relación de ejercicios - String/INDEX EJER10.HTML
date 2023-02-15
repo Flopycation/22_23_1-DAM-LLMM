@@ -11,6 +11,24 @@
 
         <script>
 
+// Pedir al usuario que ingrese una cadena de texto
+const cadena = prompt("Ingresa una cadena de texto:");
+
+// Crear una cadena vacía para almacenar la cadena modificada
+let cadenaModificada = "";
+
+// Iterar sobre cada letra de la cadena
+for (let i = 0; i < cadena.length; i++) {
+  // Agregar la letra actual a la cadena modificada
+  cadenaModificada = cadenaModificada + cadena[i];
+  // Si no estamos en el último carácter, agregar el signo "-" a la cadena modificada
+  if (i !== cadena.length - 1) {
+    cadenaModificada = cadenaModificada + "-";
+  }
+}
+
+// Mostrar la cadena modificada al usuario
+alert(cadenaModificada);
 
         </script>
         

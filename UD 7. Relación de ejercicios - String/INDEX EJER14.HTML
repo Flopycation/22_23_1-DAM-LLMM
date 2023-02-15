@@ -10,8 +10,33 @@
 <body>
 
         <script>
+// Pedimos al usuario que introduzca un texto y lo almacenamos en la variable "texto"
+let texto = prompt("Introduce un texto:");
 
+// Convertimos todo el texto a minúsculas para que la búsqueda de vocales sea insensible a mayúsculas y minúsculas
+texto = texto.toLowerCase();
 
+// Definimos un array con las vocales para poder buscarlas más fácilmente
+let vocales = ["a", "e", "i", "o", "u"];
+
+// Inicializamos la variable "posicion" a un valor que indique que no se ha encontrado ninguna vocal todavía
+let posicion = -1;
+
+// Recorremos el texto letra por letra para buscar la primera vocal
+for (let i = 0; i < texto.length; i++) {
+  // Si la letra actual es una vocal, almacenamos su posición y salimos del bucle
+  if (vocales.includes(texto[i])) {
+    posicion = i;
+    break;
+  }
+}
+
+// Mostramos la posición de la primera vocal encontrada (o un mensaje indicando que no se ha encontrado ninguna)
+if (posicion >= 0) {
+  alert("La primera vocal se encuentra en la posición " + posicion);
+} else {
+  alert("No se ha encontrado ninguna vocal en el texto.");
+}
         </script>
         
 </body>

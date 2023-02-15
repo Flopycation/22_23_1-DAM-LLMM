@@ -10,7 +10,34 @@
 <body>
 
         <script>
+// Pedir al usuario que ingrese una cadena de texto
+const cadena = prompt("Ingresa una cadena de texto:");
 
+// Convertir la cadena de texto en un array de caracteres
+const caracteres = [];
+
+for (let i = 0; i < cadena.length; i++) {
+  caracteres.push(cadena[i]);
+}
+
+// Crear un array vacío para guardar los caracteres al revés
+const caracteresAlReves = [];
+
+// Recorrer el array de caracteres desde el final hasta el principio
+for (let i = caracteres.length - 1; i >= 0; i--) {
+  // Agregar cada caracter al array de caracteres al revés
+  caracteresAlReves.push(caracteres[i]);
+}
+
+// Convertir el array de caracteres al revés en una cadena de texto
+let cadenaAlReves = "";
+
+for (let i = 0; i < caracteresAlReves.length; i++) {
+  cadenaAlReves += caracteresAlReves[i];
+}
+
+// Mostrar la cadena de texto al revés
+console.log(cadenaAlReves);
 
         </script>
         
