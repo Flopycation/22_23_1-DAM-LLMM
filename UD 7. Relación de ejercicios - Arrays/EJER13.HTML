@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		
+// Definimos un array vacío para almacenar los resultados de los lanzamientos
+let resultados = [];
+
+// Realizamos 100 lanzamientos
+for (let i = 0; i < 100; i++) {
+  // Lanzamos tres dados y obtenemos un número aleatorio entre 1 y 6 para cada uno
+  let dado1 = Math.floor(Math.random() * 6) + 1;
+  let dado2 = Math.floor(Math.random() * 6) + 1;
+  let dado3 = Math.floor(Math.random() * 6) + 1;
+  
+  // Sumamos el resultado de lanzar dos dados
+  let suma = dado1 + dado2;
+  
+  // Añadimos la suma al array de resultados
+  resultados.push(suma);
+}
+
+// Función para obtener el número que se repite más veces en el array
+function numeroMasRepetido(array) {
+  return array.reduce((a, b, i, arr) =>
+    (arr.filter(v => v === a).length >= arr.filter(v => v === b).length ? a : b), null);
+}
+
+// Función para obtener el número que se repite menos veces en el array
+function numeroMenosRepetido(array) {
+  return array.reduce((a, b, i, arr) =>
+    (arr.filter(v => v === a).length <= arr.filter(v => v === b).length ? a : b), null);
+}
+
+// Función para obtener el número mayor del array
+function numeroMayor(array) {
+  return Math.max(...array);
+}
+
+// Función para obtener el número menor del array
+function numeroMenor(array) {
+  return Math.min(...array);
+}
+
+	</script>
+</head>
+<body>
+</body>
+</html>

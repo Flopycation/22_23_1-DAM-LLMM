@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+function calcularFactorial(numero) {
+  // Creamos una variable "factorial" y le asignamos el valor inicial de 1
+  let factorial = 1;
+
+  // Creamos un bucle "for" que se ejecutará "numero" veces
+  for (let i = 1; i <= numero; i++) {
+    // En cada iteración del bucle, multiplicamos "factorial" por el valor actual de "i"
+    factorial *= i;
+  }
+
+  // Devolvemos el valor final de "factorial"
+  return factorial;
+}
+
+// Pedimos al usuario que ingrese un número y lo almacenamos en la variable "numero"
+let numero = prompt("Ingrese un número para calcular su factorial:");
+
+// Llamamos a la función "calcularFactorial" y le pasamos el valor de "numero" como argumento
+let resultado = calcularFactorial(numero);
+
+// Mostramos el resultado en la consola
+console.log("El factorial de " + numero + " es " + resultado);
+
+	</script>
+</head>
+<body>
+</body>
+</html>
