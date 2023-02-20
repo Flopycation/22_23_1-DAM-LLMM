@@ -2,23 +2,26 @@
 <html>
 <head>
 	<script>
-	let estilosDeMusica = ["Jazz", "Blues"];
+		
+// Creamos el array con los estilos de música
+var estilosMusica = ["Jazz", "Blues"];
 
-// Añadir “Rock-n-Roll” al final.
-estilosDeMusica.push("Rock-n-Roll");
+// Añadimos "Rock-n-Roll" al final
+estilosMusica.push("Rock-n-Roll");
 
-// Sustituir el valor central por “Clásicos”.
-let indiceCentral = Math.floor(estilosDeMusica.length / 2);
-estilosDeMusica[indiceCentral] = "Clásicos";
+// Sustituimos el valor central por "Clásicos"
+var posicionCentral = Math.floor(estilosMusica.length / 2); // Obtenemos la posición central
+estilosMusica[posicionCentral] = "Clásicos";
 
-// Extraer el primer valor del array y mostrarlo.
-let primerValor = estilosDeMusica.shift();
-console.log(primerValor);
+// Extraemos el primer valor del array y lo mostramos
+var primerValor = estilosMusica.shift(); // Extraemos el primer valor
+console.log(primerValor); // Mostramos el primer valor en la consola
 
-// Insertar al principio “Rap” y “Reggae” al array.
-estilosDeMusica.unshift("Rap", "Reggae");
+// Insertamos al principio "Rap" y "Reggae"
+estilosMusica.unshift("Rap", "Reggae");
 
-console.log(estilosDeMusica); // ["Rap", "Reggae", "Clásicos", "Rock-n-Roll"]
+// Mostramos el array completo en la consola
+console.log(estilosMusica);
 
 	</script>
 </head>

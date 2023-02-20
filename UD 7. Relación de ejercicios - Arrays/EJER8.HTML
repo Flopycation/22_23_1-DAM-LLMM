@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+// Función que suma los elementos de un array
+function sum(array) {
+  let total = 0; // Inicializamos la variable total en 0
+  for (let i = 0; i < array.length; i++) { // Recorremos el array con un bucle for
+    total += array[i]; // Sumamos cada elemento al total
+  }
+  return total; // Devolvemos el resultado de la suma
+}
+
+// Función que genera un array de valores dentro de un rango especificado
+function range(start, end, step = 1) {
+  let array = []; // Creamos un array vacío
+  if (step > 0) { // Si el paso es positivo...
+    for (let i = start; i <= end; i += step) { // Recorremos el rango con un bucle for
+      array.push(i); // Añadimos cada valor al array
+    }
+  } else if (step < 0) { // Si el paso es negativo...
+    for (let i = start; i >= end; i += step) { // Recorremos el rango con un bucle for
+      array.push(i); // Añadimos cada valor al array
+    }
+  } else { // Si el paso es cero, no se pueden generar valores
+    console.error('Error: El paso no puede ser cero');
+  }
+  return array; // Devolvemos el array generado
+}
+
+// Ejemplos de uso de las funciones
+console.log(sum([1, 2, 3])); // Debería imprimir 6
+console.log(range(1, 10)); // Debería imprimir [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+console.log(range(5, 2, -1)); // Debería imprimir [5, 4, 3, 2]
+console.log(range(1, 10, 0)); // Debería imprimir un error en la consola
+	</script>
+</head>
+<body>
+</body>
+</html>

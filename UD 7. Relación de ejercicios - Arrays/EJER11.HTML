@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		
+var valores = [true, 5, false, "hola", "adios", 2];
+
+// Ejercicio 1: determinar cuál de los dos elementos de texto es mayor
+if (valores[3].localeCompare(valores[4]) > 0) {
+  console.log("El texto 'hola' es mayor que el texto 'adios'");
+} else if (valores[3].localeCompare(valores[4]) < 0) {
+  console.log("El texto 'adios' es mayor que el texto 'hola'");
+} else {
+  console.log("Los textos son iguales");
+}
+
+// Ejercicio 2: determinar operadores necesarios para obtener un resultado true y otro false
+if (valores[0] && valores[2]) {
+  console.log("El resultado es true");
+}
+
+if (!valores[0] || !valores[2]) {
+  console.log("El resultado es false");
+}
+
+// Ejercicio 3: realizar cinco operaciones matemáticas con los dos elementos numéricos
+var num1 = valores[1];
+var num2 = valores[5];
+
+console.log("Suma: " + (num1 + num2));
+console.log("Resta: " + (num1 - num2));
+console.log("Multiplicación: " + (num1 * num2));
+console.log("División: " + (num1 / num2));
+console.log("Módulo: " + (num1 % num2));
+
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invertir cadena</title>
+</head>
+<body>
+  <h1>Invertir cadena</h1>
+  <label>Introduce una palabra:</label>
+  <input type="text" id="palabra">
+  <button onclick="mostrarPalabraInvertida()">Invertir</button>
+  <p id="resultado"></p>
+
+  <script>
+    function invertirCadena(palabra) {
+      return palabra.split("").reverse().join("");
+    }
+
+    function mostrarPalabraInvertida() {
+      var entrada = document.getElementById("palabra").value;
+      var salida = invertirCadena(entrada);
+      document.getElementById("resultado").innerHTML = "Palabra invertida: " + salida;
+    }
+  </script>
+</body>
+</html>

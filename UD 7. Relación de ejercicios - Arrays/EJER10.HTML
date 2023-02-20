@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Invertir cadena y verificar palíndromo</title>
+</head>
+<body>
+  <h1>Invertir cadena y verificar palíndromo</h1>
+  <label>Introduce una palabra:</label>
+  <input type="text" id="palabra">
+  <button onclick="mostrarPalabraInvertida()">Invertir</button>
+  <button onclick="verificarPalindromo()">Verificar Palíndromo</button>
+  <p id="resultado"></p>
+
+  <script>
+    function invertirCadena(palabra) {
+      return palabra.split("").reverse().join("");
+    }
+
+    function mostrarPalabraInvertida() {
+      var entrada = document.getElementById("palabra").value;
+      var salida = invertirCadena(entrada);
+      document.getElementById("resultado").innerHTML = "Palabra invertida: " + salida;
+    }
+
+    function verificarPalindromo() {
+      var entrada = document.getElementById("palabra").value;
+      var esPalindromo = (entrada === invertirCadena(entrada));
+      if (esPalindromo) {
+        document.getElementById("resultado").innerHTML = "La palabra ingresada es un palíndromo.";
+      } else {
+        document.getElementById("resultado").innerHTML = "La palabra ingresada no es un palíndromo.";
+      }
+    }
+  </script>
+</body>
+</html>
