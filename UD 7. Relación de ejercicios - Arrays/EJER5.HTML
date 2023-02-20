@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	let estilosDeMusica = ["Jazz", "Blues"];
+
+// Añadir “Rock-n-Roll” al final.
+estilosDeMusica.push("Rock-n-Roll");
+
+// Sustituir el valor central por “Clásicos”.
+let indiceCentral = Math.floor(estilosDeMusica.length / 2);
+estilosDeMusica[indiceCentral] = "Clásicos";
+
+// Extraer el primer valor del array y mostrarlo.
+let primerValor = estilosDeMusica.shift();
+console.log(primerValor);
+
+// Insertar al principio “Rap” y “Reggae” al array.
+estilosDeMusica.unshift("Rap", "Reggae");
+
+console.log(estilosDeMusica); // ["Rap", "Reggae", "Clásicos", "Rock-n-Roll"]
+
+	</script>
+</head>
+<body>
+</body>
+</html>

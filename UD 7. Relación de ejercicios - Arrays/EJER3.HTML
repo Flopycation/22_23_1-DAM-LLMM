@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // Pedimos las edades
+var edad1 = prompt("Ingrese la edad de la persona 1:");
+var edad2 = prompt("Ingrese la edad de la persona 2:");
+var edad3 = prompt("Ingrese la edad de la persona 3:");
+
+// Pedimos los nombres
+var nombre1 = prompt("Ingrese el nombre de la persona 1:");
+var nombre2 = prompt("Ingrese el nombre de la persona 2:");
+var nombre3 = prompt("Ingrese el nombre de la persona 3:");
+
+// Convertimos las edades a números
+edad1 = Number(edad1);
+edad2 = Number(edad2);
+edad3 = Number(edad3);
+
+// Comparamos las edades para determinar la mayor
+if (edad1 > edad2 && edad1 > edad3) {
+  // La persona 1 es la mayor
+  alert("La persona mayor es " + nombre1);
+} else if (edad2 > edad1 && edad2 > edad3) {
+  // La persona 2 es la mayor
+  alert("La persona mayor es " + nombre2);
+} else if (edad3 > edad1 && edad3 > edad2) {
+  // La persona 3 es la mayor
+  alert("La persona mayor es " + nombre3);
+} else {
+  // Hay dos o más personas con la misma edad
+  alert("Hay dos o más personas con la misma edad");
+}
+
+    </script>
+</body>
+</html>

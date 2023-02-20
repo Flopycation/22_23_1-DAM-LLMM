@@ -10,30 +10,40 @@
 <body>
 
         <script>
-// Pedir al usuario que ingrese una frase
-const frase = prompt("Ingresa una frase:");
+// Pedimos al usuario que ingrese una frase
+let frase = prompt("Ingresa una frase:");
 
-// Crear un objeto para almacenar el contador de cada vocal
-const contadorVocales = {
-  'a': 0,
-  'e': 0,
-  'i': 0,
-  'o': 0,
-  'u': 0
-};
+// Inicializamos las variables para contar las vocales
+let a = 0;
+let e = 0;
+let i = 0;
+let o = 0;
+let u = 0;
 
-// Iterar sobre cada letra de la frase
-for (let i = 0; i < frase.length; i++) {
-  // Si la letra actual es una vocal, incrementar el contador correspondiente
-  const letra = frase.charAt(i).toLowerCase();
-  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
-    contadorVocales[letra]++;
+// Recorremos la frase y contamos las vocales
+for (let j = 0; j < frase.length; j++) {
+  let letra = frase[j].toLowerCase(); // Convertimos la letra a minúscula para comparar
+
+  if (letra === "a") {
+    a++;
+  } else if (letra === "e") {
+    e++;
+  } else if (letra === "i") {
+    i++;
+  } else if (letra === "o") {
+    o++;
+  } else if (letra === "u") {
+    u++;
   }
 }
 
-// Mostrar el número de cada vocal encontrada al usuario
-alert(`La frase tiene ${contadorVocales['a']} letras 'a', ${contadorVocales['e']} letras 'e', ${contadorVocales['i']} letras 'i', ${contadorVocales['o']} letras 'o' y ${contadorVocales['u']} letras 'u'.`);
-
+// Mostramos los resultados al usuario
+console.log("La frase ingresada es: " + frase);
+console.log("La vocal A aparece " + a + " veces.");
+console.log("La vocal E aparece " + e + " veces.");
+console.log("La vocal I aparece " + i + " veces.");
+console.log("La vocal O aparece " + o + " veces.");
+console.log("La vocal U aparece " + u + " veces.");
 
         </script>
         

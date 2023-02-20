@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function calcularLetraDNI(dni) {
+  const dniRegex = /^(\d{8})([A-HJ-NP-TV-Z])$/i;
+  
+  const match = dni.match(dniRegex);
+  if (!match) {
+    return "";
+  }
+  
+  const [, numeroDNI, letraDNI] = match;
+  
+  const letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+  const letraCalculada = letras.charAt(numeroDNI % 23);
+  
+  if (letraCalculada === letraDNI.toUpperCase()) {
+    return letraDNI.toUpperCase();
+  } else {
+    return "";
+  }
+}
+
+    </script>
+</body>
+</html>
